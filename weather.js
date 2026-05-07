@@ -14,6 +14,7 @@ function print(data) {
   console.log("風向：" + data.wind.deg); //197
 }
 
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 

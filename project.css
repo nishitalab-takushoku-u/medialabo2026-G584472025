@@ -11,40 +11,6 @@ body {
     padding: 20px;
     background-color: #f8f9fa;
 }
-
-.result-item {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.result-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.result-item li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-
-.result-item li strong{
-    color: #2c3e50;
-    margin-right: 5px;
-}
-
-.gourmet-information {
-    background-color: #fff9f0;
-    padding: 15px;
-    border: 1px solid #ffcc80;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
 .world-weather {
     background-color: #f0f8ff;
     padding: 15px;

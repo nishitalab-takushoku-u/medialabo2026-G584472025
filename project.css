@@ -19,6 +19,7 @@ body {
     padding: 15px;
     border: 1px solid #dee2e6;
     border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .result-item ul {
@@ -42,6 +43,7 @@ body {
     border: 1px solid #ffcc80;
     margin-bottom: 30px;
     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .world-weather {

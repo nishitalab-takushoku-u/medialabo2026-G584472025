@@ -59,5 +59,14 @@ body {
 }
 
 .world-weather dt {
-    width: 30%
+    width: 30%;
+    font-weight: bold;
+    color: #4682b4;
+    margin-bottom: 10px;
+}
+
+.world-weather dd {
+    width: 70px;
+    margin-left: 0;
+    margin-bottom: 10px;
 }

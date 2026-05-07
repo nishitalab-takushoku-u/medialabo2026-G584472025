@@ -1,0 +1,63 @@
+body {
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 30px 20px;
+}
+
+.category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.result-item {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.result-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.result-item li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.result-item li strong{
+    color: #2c3e50;
+    margin-right: 5px;
+}
+
+.gourmet-information {
+    background-color: #fff9f0;
+    padding: 20;
+    border: 2px solid #ffcc80;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+.world-weather {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border: 1px solid #add8e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.world-weather dl {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.world-weather dt {
+    width: 30%
+}

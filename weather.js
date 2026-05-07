@@ -1,8 +1,7 @@
 
 // 課題3-1 のプログラムはこの関数の中に記述すること
 function print(data) {
-  let result = "世界の天気（検索結果は1件）";
-  console.log(result);
+  console.log("世界の天気（検索結果は1件）");
   console.log("都市名：" + data.name); //北京市
   console.log("経度：" + data.coord.lon); //116.3972
   console.log("緯度：" + data.coord.lat); //39.9075

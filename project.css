@@ -10,7 +10,6 @@ body {
     margin-bottom: 40px;
     padding: 20px;
     background-color: #f8f9fa;
-    border-radius: 10px;
 }
 
 .result-item {
@@ -18,7 +17,7 @@ body {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #dee2e6;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -42,7 +41,7 @@ body {
     padding: 15px;
     border: 1px solid #ffcc80;
     margin-bottom: 30px;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 

@@ -1,15 +1,17 @@
 
 // 課題3-1 のプログラムはこの関数の中に記述すること
 function print(data) {
-  console.log(data.name); //北京市
-  console.log(data.coord.lon); //経度
-  console.log(data.coord.lat); //緯度
-  console.log(data.weather[0].description); //曇りがち
-  console.log(data.main.temp_min); //最低気温
-  console.log(data.main.temp_max); //最高気温
-  console.log(data.main.humidity); //湿度
-  console.log(data.wind.speed); //風速
-  console.log(data.wind.deg); //風向
+  let result = "世界の天気（検索結果は1件）";
+  console.log(result);
+  console.log("都市名：" + data.name); //北京市
+  console.log("経度：" + data.coord.lon); //116.3972
+  console.log("緯度：" + data.coord.lat); //39.9075
+  console.log("天気：" + data.weather[0].description); //曇りがち
+  console.log("最低気温：" + data.main.temp_min + "℃"); //9.94
+  console.log("最高気温：" + data.main.temp_max + "℃"); //9.94
+  console.log("湿度：" + data.main.humidity + "%"); //14
+  console.log("風速：" + data.wind.speed); //2.65
+  console.log("風向：" + data.wind.deg); //197
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること

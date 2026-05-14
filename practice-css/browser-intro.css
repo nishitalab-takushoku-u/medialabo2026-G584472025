@@ -9,14 +9,14 @@ p.info {
 
 h1 {
 	color: white;
-	text-shadow: 0 0 10px rgba(0, 0, 128, 0.5);
+	text-shadow: 0 0 10px rgba(0, 0, 128, 1);
 }
 
 h2 {
-	padding: 5px;
 	font-family: cursive;
 	color: #3f3faf;
 	background: linear-gradient(90deg in oklab, white, #ffefaf);
+	margin: 5px;
 }
 
 div#zentai {
@@ -28,8 +28,8 @@ div#zentai {
 }
 
 div#zentai > div {
-	margin-left: 5px;
 	background-color: #ffefaf;
+	padding: 5px;
 }
 
 img.icon {

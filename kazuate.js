@@ -11,6 +11,15 @@ let kaisu = 0;
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
+
+  let Seikai = false;
+  let resultP = document.querySelector('p#result');
+
+  if (kaisu >= 3 || Seikai === true) {
+      resultP.textContent ='答えは ' + kotae + ' でした．すでにゲームは終わっています';
+      return;
+    }
+
   // ここから: 予想回数を1増やして，span#kaisu 要素のテキストを更新
   kaisu = kaisu + 1;
   let p = document.querySelector('span#kaisu');
@@ -19,22 +28,24 @@ function hantei() {
   
   // ここから: テキストボックスに指定された数値を yoso に代入する
   let a = document.querySelector('input[name="yoso"]');
-  let yoso = Number(a);
+  let yoso = Number(a.value);
   // ここまで: テキストボックスに指定された数値を yoso に代入する
   
   // ここから: 正解判定する
   // 　　　　  正解/不正解のときのメッセージを表示する
-  for (let i=0; i<3; i=i+1) {
     if (kotae === yoso) {
-      console.log('正解です!');
+      resultP.textContent ='正解です．おめでとう!';
+      Seikai = true;
+      return;
     }
-    else if (kotae > yoso) {
-      console.log('不正解です. 答えは ' + yoso + ' より大きいです.');
+    if (kotae > yoso) {
+      resultP.textContent ='不正解です. 答えは ' + yoso + ' より大きいです.';
     }
-    else {
-      console.log('不正解です. 答えは ' + yoso + ' より小さいです.');
+    if (kotae < yoso) {
+      resultP.textContent ='不正解です. 答えは ' + yoso + ' より小さいです.';
     }
-  }
+    
+  
 
   // ここまで: 正解判定する
 }

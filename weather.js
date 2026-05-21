@@ -16,7 +16,63 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+let c = document.createElement('div');
+c.setAttribute('class', 'category');
+let h2 = document.querySelector('h2#kaisu');
+h2.insertAdjacentElement('beforeend', c);
 
+
+let r = document.createElement('div');
+r.setAttribute('id', 'result');
+c.insertAdjacentElement('beforeend', r);
+
+let w = document.createElement('div');
+w.setAttribute('class', 'world-weather');
+r.insertAdjacentElement('beforeend', w);
+
+let dl = document.createElement('dl');
+w.insertAdjacentElement('beforeend', dl); 
+let dt = document.createElement('dt');
+dl.insertAdjacentElement('beforeend', dt);
+dt.textContent = '都市名：';
+let dd = document.createElement('dd');
+dt.insertAdjacentElement('afterend', dd);
+dd.textContent = data.name;
+
+dt = document.createElement('dt');
+dd.insertAdjacentElement('afterend', dt);
+dt.textContent = '座標：';
+dd = document.createElement('dd');
+dt.insertAdjacentElement('afterend', dd);
+dd.textContent = '経度: ' + data.coord.lon + ' / 緯度: ' + data.coord.lat;
+
+dt = document.createElement('dt');
+dd.insertAdjacentElement('afterend', dt);
+dt.textContent = '天気：';
+dd = document.createElement('dd');
+dt.insertAdjacentElement('afterend', dd);
+dd.textContent = data.weather[0].description;
+
+dt = document.createElement('dt');
+dd.insertAdjacentElement('afterend', dt);
+dt.textContent = '気温：';
+dd = document.createElement('dd');
+dt.insertAdjacentElement('afterend', dd);
+dd.textContent = '最低: ' + data.main.temp_min + ' / 最高: ' + data.main.temp_max;
+
+dt = document.createElement('dt');
+dd.insertAdjacentElement('afterend', dt);
+dt.textContent = '湿度：';
+dd = document.createElement('dd');
+dt.insertAdjacentElement('afterend', dd);
+dd.textContent = data.main.humidity + '%';
+
+dt = document.createElement('dt');
+dd.insertAdjacentElement('afterend', dt);
+dt.textContent = '風：';
+dd = document.createElement('dd');
+dt.insertAdjacentElement('afterend', dd);
+dd.textContent = '風速: ' + data.wind.speed + ' / 風向: ' + data.wind.deg;
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述

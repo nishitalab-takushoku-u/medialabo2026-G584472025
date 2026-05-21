@@ -36,3 +36,6 @@ function changeDom() {
     u.insertAdjacentElement('beforeend', l);
     l.textContent = '青';
 }
+
+let b = document.querySelector('button#henkou');
+b.addEventListener('click', changeDom);

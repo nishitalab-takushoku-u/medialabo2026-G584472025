@@ -5,11 +5,30 @@
         <meta charset="utf-8">
         <title>課題1-4: 検索結果を表示する</title>
         <link rel="stylesheet" href="project.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <script src="weather.js" defer></script>
     </head>
 
     <body>
-        <h1>検索結果</h1>
-        <h2>世界の天気（検索結果は <span id='kaisu'>1</span> 件）</h2>
+            <p id="city">
+                <label><input type="checkbox" value="1816670" name="city">Beijing 北京 （中華人民共和国）</label><br>
+                <label><input type="checkbox" value="360630" name="city">Cairo カイロ （エジプト）</label><br>
+                <label><input type="checkbox" value="993800" name="city">Johannesburg ヨハネスブルク （南アフリカ）</label><br>
+                <label><input type="checkbox" value="2643743" name="city">London ロンドン （イギリス）</label><br>
+                <label><input type="checkbox" value="5368361" name="city">Los Angeles ロサンゼルス （アメリカ合衆国）</label><br>
+                <label><input type="checkbox" value="524901" name="city">Moscow モスクワ （ロシア）</label><br>
+                <label><input type="checkbox" value="5128581" name="city">New York ニューヨーク （アメリカ合衆国）</label><br>
+                <label><input type="checkbox" value="2968815" name="city">Paris パリ （フランス）</label><br>
+                <label><input type="checkbox" value="3451189" name="city">Rio de Janeiro リオデジャネイロ （ブラジル）</label><br>
+                <label><input type="checkbox" value="1880252" name="city">Singapore シンガポール</label><br>
+                <label><input type="checkbox" value="2147714" name="city">Sydney シドニー （オーストラリア）</label><br>
+                <label><input type="checkbox" value="1850147" name="city">Tokyo 東京 （日本）</label><br>
+                
+                <button id='kensaku'>天気を検索する</button>
+            </p>
+    <h1>検索結果</h1>
+        <h2 id='weather-title'>世界の天気（検索結果は <span id='kaisu'>0</span> 件）</h2>
+
+        <div id="container"></div>
     </body>
 </html>

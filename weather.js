@@ -1,4 +1,6 @@
 
+let kaisu = document.querySelector('span#kaisu');
+
 // 課題3-1 のプログラムはこの関数の中に記述すること
 function print(data) {
   console.log("世界の天気（検索結果は1件）");
@@ -16,10 +18,14 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+
+let Count = Number(kaisu.textContent);
+kaisu.textContent = Count + 1;
+
 let c = document.createElement('div');
 c.setAttribute('class', 'category');
-let h2 = document.querySelector('h2#kaisu');
-h2.insertAdjacentElement('beforeend', c);
+let h2 = document.querySelector('h2#weather-title');
+h2.insertAdjacentElement('afterend', c);
 
 
 let r = document.createElement('div');
@@ -73,21 +79,50 @@ dt.textContent = '風：';
 dd = document.createElement('dd');
 dt.insertAdjacentElement('afterend', dd);
 dd.textContent = '風速: ' + data.wind.speed + ' / 風向: ' + data.wind.deg;
+
+container.insertAdjacentElement('beforeend', c);
+
+
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-
+let b = document.querySelector('button#kensaku');
+b.addEventListener('click', sendRequest);
 
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
+  let container = document.querySelector('div#container');
+  container.textContent = '';
+  
+  kaisu.textContent = 0;
+
+    let checkedBoxes = document.querySelectorAll('input[name="city"]:checked');
+
+    for (let box of checkedBoxes) {
+      let cityId = box.value;
+      let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + cityId + '.json';
+
+      axios.get(url)
+          .then(showResult)
+          .catch(showError)
+          .then(finish);
+    }
 
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
+  let data = resp.data;
 
+  if (typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+
+  console.log(data);
+
+  printDom(data);
 }
 
 // 課題6-1: 通信エラーが発生した時の処理

@@ -10,6 +10,9 @@ body {
     margin-bottom: 40px;
     padding: 20px;
     background-color: #f8f9fa;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .world-weather {
     background-color: #f0f8ff;
@@ -17,6 +20,7 @@ body {
     border: 1px solid #add8e6;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    width: 360px;
 }
 
 .world-weather dl {
@@ -34,7 +38,7 @@ body {
 }
 
 .world-weather dd {
-    width: 70px;
+    width: 70%;
     margin-left: 0;
     margin-bottom: 10px;
 }

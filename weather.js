@@ -1,5 +1,6 @@
 
 let kaisu = document.querySelector('span#kaisu');
+let container = document.querySelector('div#container');
 
 // 課題3-1 のプログラムはこの関数の中に記述すること
 function print(data) {
@@ -22,19 +23,8 @@ function printDom(data) {
 let Count = Number(kaisu.textContent);
 kaisu.textContent = Count + 1;
 
-let c = document.createElement('div');
-c.setAttribute('class', 'category');
-let h2 = document.querySelector('h2#weather-title');
-h2.insertAdjacentElement('afterend', c);
-
-
-let r = document.createElement('div');
-r.setAttribute('id', 'result');
-c.insertAdjacentElement('beforeend', r);
-
 let w = document.createElement('div');
 w.setAttribute('class', 'world-weather');
-r.insertAdjacentElement('beforeend', w);
 
 let dl = document.createElement('dl');
 w.insertAdjacentElement('beforeend', dl); 
@@ -80,7 +70,7 @@ dd = document.createElement('dd');
 dt.insertAdjacentElement('afterend', dd);
 dd.textContent = '風速: ' + data.wind.speed + ' / 風向: ' + data.wind.deg;
 
-container.insertAdjacentElement('beforeend', c);
+container.insertAdjacentElement('beforeend', w);
 
 
 }
@@ -93,9 +83,7 @@ b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-  let container = document.querySelector('div#container');
   container.textContent = '';
-  
   kaisu.textContent = 0;
 
     let checkedBoxes = document.querySelectorAll('input[name="city"]:checked');
